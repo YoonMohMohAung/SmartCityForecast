@@ -1,53 +1,39 @@
-# 🌦️⚡ Smart City Weather & Energy Forecasting System
+# ⚡ Smart City Energy Demand Forecasting
 
-### Using Government Open Data & Time Series Forecasting
+## Overview
+This project focuses on forecasting high-frequency electricity demand using
+real-world government open energy data from Thailand.
 
-## 📌 Project Overview
+The dataset contains 5-minute interval electricity generation and demand
+across multiple regions, with a focus on metropolitan demand forecasting.
 
-This project aims to develop a **Smart City Forecasting System** that
-predicts both **weather conditions** and **energy consumption** using
-government open data and time series forecasting techniques.
+## Dataset
+- Source: Thailand Government Open Data
+- Frequency: 5-minute
+- Target: Metropolitan electricity demand
+- Period: 2023–
 
-By combining weather and energy datasets, this system demonstrates how
-climate factors influence electricity demand --- a critical insight for
-**urban planning**, **energy optimization**, and **smart city
-management**.
+## Models Implemented
+- Naive Baseline
+- SARIMAX (seasonal time-series model)
+- XGBoost (machine learning)
+- LSTM (deep learning)
 
-The project integrates classical statistical models and modern machine
-learning models into a **production-ready forecasting API** with an
-interactive dashboard.
+## Features
+- Time-based features (hour, weekday)
+- Lag features (1 step, 1 hour, 1 day)
+- Rolling statistics
 
-## 🎯 Objectives
+## Tech Stack
+- Python, Pandas, NumPy
+- Scikit-learn, XGBoost
+- Statsmodels (SARIMAX)
+- TensorFlow / Keras (LSTM)
+- Streamlit (Visualization)
 
--   🌡️ Temperature\
--   🌧️ Rainfall\
--   ⚡ Electricity demand
+## How to Run
+```bash
+pip install -r requirements.txt
+python train.py
+streamlit run app.py
 
-Analyze weather impact on energy consumption, build ML system using
-official data, deploy scalable API and dashboard.
-
-## 🏙️ Use Cases
-
-Smart city planning, energy load balancing, optimization, resilience,
-peak detection.
-
-## 📂 Data Sources
-
-Weather & Energy from government open data portals (data.go.th, eia.gov,
-meteostat.net)
-
-## 🧠 Models
-
-ARIMA, SARIMA, SARIMAX, XGBoost, Random Forest, LSTM, GRU
-
-## ⚙️ Architecture
-
-Government Data → Processing → Models → FastAPI → Dashboard
-
-## 🛠️ Tech Stack
-
-Python, FastAPI, Vue/Streamlit, Docker
-
-## 👤 Author
-
-YOON MOH MOH AUNG
